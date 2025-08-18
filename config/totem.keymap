@@ -66,6 +66,13 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
+
+        test_macro: test_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(U) &kp O>;
+            label = "TEST_MACRO";
+        };
     };
 
     keymap {
