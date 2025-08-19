@@ -67,12 +67,20 @@
                 <&kp G &kp I &kp F>;
         };
 
-        test_macro: test_macro {
+        swe_o_macro: test_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp RA(U) &kp O>;
 
             label = "TEST_MACRO";
+        };
+
+        swe_a_macro: swe_a_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp RA(U) &kp A>;
+
+            label = "SWE_A_MACRO";
         };
     };
 
@@ -151,8 +159,8 @@
 
             bindings = <
            &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT          &kp CARET     &kp AMPS        &kp RA(U)         &kp SQT     &kp DQT
-           &kp RA(A)    &trans       &kp RA(S)  &trans    &kp QUESTION       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)        &kp RA(N4)  &test_macro
-&kp COLON  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &kp EXCLAMATION    &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV        &kp C_NEXT  &kp BSLH     &trans
+           &kp RA(A)    &trans       &kp RA(S)  &trans    &kp QUESTION       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)        &kp RA(N4)  &swe_o_macro
+&kp COLON  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &kp EXCLAMATION    &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV        &kp C_NEXT  &kp BSLH      &swe_a_macro
                                      &trans     &gif      &mo ADJ            &trans        &trans          &kp C_PLAY_PAUSE
             >;
         };
