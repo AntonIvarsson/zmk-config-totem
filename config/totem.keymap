@@ -50,15 +50,7 @@
             label = "giphy";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
+            bindings = <&macro_tap>, <&kp SLASH &kp G &kp I &kp P &kp H &kp Y>;
         };
 
         swe_o_macro: test_macro {
